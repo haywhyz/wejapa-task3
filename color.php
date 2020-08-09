@@ -14,27 +14,30 @@ session_start();
     <script src="main.js"></script>
 </head>
 <body style= "background-color: <?php echo $_SESSION['color'] ?> ">
-    <label for="">
-    <?php echo $_SESSION['firstname'] ?>
-    </label>
+  <center><h2>Below are your Details </h2></center>
 
-    <label for="">
-    <?php echo $_SESSION['secondname'] ?>
-    </label>
+  
+    <p>
+   <h4> <?php echo $_SESSION['firstname'] ?></h4>
+    </p>
 
-    <label for="">
-    <?php echo $_SESSION['email'] ?>
-    </label>
+    <p>
+   <h4> <?php echo $_SESSION['secondname'] ?></h4>
+    </p>
 
-    <label for="">
-    <?php echo $_SESSION['gender'] ?>
-    </label>
-    <label for="">
-    <?php echo $_SESSION['dob'] ?>
-    </label>
-    <label for="">
-    <?php echo $_SESSION['department'] ?>
-    </label>
+    <p>
+   <h4> <?php echo $_SESSION['email'] ?></h4>
+    </p>
+
+    <p>
+    <h4><?php echo $_SESSION['gender'] ?></h4>
+    </p>
+    <p>
+   <h4> <?php echo $_SESSION['dob'] ?></h4>
+    </p>
+    <p>
+   <h4> <?php echo $_SESSION['department'] ?></h4>
+    </p>
 
 </body>
 </html>
