@@ -59,7 +59,7 @@ else {
 if (empty($_POST["dob"])) {
  $dobErr = "Date of birth is required";
 }else {
- $comment = test_input($_POST["dob"]);
+ $dob = test_input($_POST["dob"]);
 }
 
 if (empty($_POST["color"])) {
@@ -93,7 +93,12 @@ elseif(!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $_POST["password"])) {
 }
 
 if ($firstnameErr == "" && $secondnameErr =="" && $emailErr =="" && $genderErr =="" && $dobErr =="" && $colorErr =="" && $departmentErr =="" && $passwordErr == "") {
+    $_SESSION['firstname'] = $firstname;
+    $_SESSION['secondname'] = $secondname;
+    $_SESSION['gender'] = $gender;
+    $_SESSION['dob'] = $dob;
     $_SESSION['color'] = $color;
+    $_SESSION['department'] = $department;
     header('location:color.php');    
     ; 
 }
